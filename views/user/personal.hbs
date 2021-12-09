@@ -1,0 +1,47 @@
+
+<a href="/addentry" class="block button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center">Нащебетать</a>
+
+<div class="wrapper m-5 mt-0 shadow-lg p-5 pt-5 bg-body rounded">
+
+  <table class="table table-orders table-ligth">
+    <thead>
+      <tr>
+        <th scope="col">Щебетание</th>
+        <th scope="col">Щебетатель</th>
+        <th scope="col">Лайки</th>
+        <th scope="col">Лайкнуть</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+      {{#each entries}}
+     
+      <tr id="1tr{{this.id}}" data-entryId={{this.id}}>
+        <div id="div{{this.id}}">
+        <td id="body{{this.id}}" class="pe-auto">{{this.body}}</td>
+        <td id="user{{this.id}}" class="pe-auto">{{this.user_name}}</td>
+        <td id="{{this.id}}" class="pe-auto">{{this.like}}</td>
+
+        <td><button type="submit" id="like{{this.id}}" class="likeButton change{{this.id}}">лайкнуть</button></td>
+      </tr>
+      <tr id="2tr{{this.id}}">
+        <td>
+        <td><button type="submit" id="change{{this.id}}" class="changeButton change{{this.id}}">изменить</button></td>
+        </td>
+        <td>
+        <td><button type="submit" id="delete{{this.id}}" class="deleteButton change{{this.id}}">удалить</button></td>
+        </td>
+      </tr>
+     
+
+
+
+      {{/each}}
+
+
+
+
+    </tbody>
+  </table>
+</div>
